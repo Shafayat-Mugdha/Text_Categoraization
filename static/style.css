@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body { 
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background-color: #E0E0E0;
+}
+#navbar{
+    background: linear-gradient(#00c6ff,#0072ff);
+}
+.navbar-brand{
+    font-size: 20px;
+    font-family: 'Nanum Gothic', sans-serif
+}
+
+
+#information_button{
+    font-size: 15px;
+    color: white;
+    transition: all .3s ease;
+    border: 1px solid white;
+}
+#information_button:hover{
+    background-color: white;
+    color: #0072ff;
+    font-weight: bold;
+    opacity: 1;
+}
+#information_modal_table{width: 80%;}
+#sequence_table{width:100%}
+#partition_2{border-left: 1px solid #E0E0E0;}
+
+#card{
+    height: 600px;
+    box-shadow: 0 8px 16px -6px #0072ff;
+}
+#card_logo{width: 25%;}
+#first_text_box_header, #second_text_box_header{font-weight: bold; font-family: 'Roboto', sans-serif; color: #4C4A48;}
+#upload_input_field{
+    border: 1px solid #0072ff;
+}
+#text_box{resize: none; font-size: 14px;}
+#text_box_format{
+    text-decoration: none; 
+    color: #4C4A48; 
+    font-size: 12px;
+}
+#reset_button{
+    width: 15%;
+    color: #607D8B;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid #607D8B;
+    transition: all 0.3s ease-in-out;
+}
+#reset_button:hover{
+    background-color: #607D8B;
+    border: 1px solid #607D8B;
+    color: white;
+    box-shadow: 0 8px 10px -6px #4C4A48;
+}
+#submit_button_csv, #submit_button_fasta{
+    width: 30%;
+    color: #0072ff;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid #0072ff;
+    transition: all 0.3s ease-in-out;
+}
+#submit_button_csv:hover, #submit_button_fasta:hover{
+    background-color: #0072ff;
+    border: 1px solid #0072ff;
+    color: white;
+    box-shadow: 0 8px 10px -6px #4C4A48;
+}
+#reference_text{font-family: 'Roboto'; color: #4C4A48; padding-bottom: 10px; font-size: 13px;}
+
+#table_row{
+    font-family: 'Roboto', sans-serif; 
+    color: #4C4A48;
+    font-size: 12px;
+}
+
+#prediction_table_container{
+    height: 350px; 
+}
+#output_div{
+    overflow-y: auto;
+}
+#prediction_table{
+    border: 2px solid #0072ff;
+}
+#prediction_table .th{
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif; 
+    color: #4C4A48;
+}
+#prediction_table .td{
+    font-weight: lighter; 
+    font-family: 'Roboto', sans-serif; 
+    color: #4C4A48;
+}
+#csv_input{width: 90%; }
+#download_button{
+    width: 25%;
+    color: #0072ff;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid #0072ff;
+    transition: all 0.3s ease-in-out;
+}
+#download_button:hover{
+    background-color: #0072ff;
+    color: white;
+    box-shadow: 0 8px 10px -6px #4C4A48;
+}
+#output_div{box-shadow: 0 8px 10px -6px #4C4A48;}
+
+
+@media only screen 
+and (min-device-width : 769px) 
+and (max-device-width : 1023px) 
+and (orientation : portrait) {
+    html, body{
+        overflow: auto;
+    }
+    #card{height: 500px;}
+    #information_button{
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #f0f0f0;
+        color: #0072ff;
+        border: 1px solid #0072ff;
+        border-radius: 10px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px) 
+and (orientation : portrait) {
+    #card{height: 500px;}
+    #download_button{width: 40%;margin-top: 20px;}
+}
+
+@media only screen and (max-width: 768px) {
+    /* Mobile Version */
+    html, body{
+        overflow: auto;
+    }
+    #navbar{
+        background: linear-gradient(#00c6ff,#0072ff);
+    }
+    .navbar-brand{
+        font-size: 20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        display: none;
+    }
+    #navbar_button{width: 100%;margin-top: 10px;border-radius: 10px;outline: none;}
+    #information_button{
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #f0f0f0;
+        color: #0072ff;
+        border: 1px solid #0072ff;
+        border-radius: 10px;
+    }
+    #information_modal_table{width: 100%;}
+    #sequence_table{width:100%;white-space: nowrap;overflow: hidden;}
+    #partition_2{border-left: none}
+    #card{height: 750px;}
+    #card_logo{width: 70%;}
+    #card_sub_header{ font-size: 12px;}
+    #first_text_box_header, #second_text_box_header, #text_box{font-size: 12px;}
+    #second_text_box_header{margin-top: 30px;}
+    #text_box_format{font-size: 10px;line-height: 0.5;}
+    #checkbox_section_header{margin-left: 0px;}
+    #checkbox_section{margin-left: 0px;}
+    #csv_input{font-size: 12px;width: 100%;display: block; float: none;}
+    #csv_input_label{white-space: nowrap;overflow: hidden;}
+    #submit_button_fasta, #submit_button_csv, #reset_button{margin-top: -10px;font-size: 12px; width: 35%; display: block;}
+    #reference_text_icon{float: left;}
+    #reference_text{font-size: 10px;display: block;}
+    #download_button{width: 100%;}
+    #prediction_table_container{
+        height: 350px; 
+        overflow-y: auto;
+    }
+    .modal-body{font-size: 12px;}
+}
