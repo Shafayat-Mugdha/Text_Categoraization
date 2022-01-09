@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3 style="font-family: 'Nanum Gothic', sans-serif; color: #0072ff">
+        <span><img id="card_logo" src="static/Text cat.png" alt="iRNA5hmC-PS"></span></span>
+    </h3>
+    <h5 id="card_sub_header" style="font-weight: bold; font-family: 'Roboto', sans-serif; color: #1ba565; padding-bottom: 5px;">
+        Accurate prediction of bangla text article categorization by utilizing novel bangla stemmer
+    </h5>
+
+    <hr>
+
+    <div class="row">
+
+        <div id="partition_1" class="col-md-6">
+            <div class="container">
+                <h6 id="first_text_box_header">
+                    Paste Bangla Text <span>(<a style="color:#0072ff;text-decoration: none;" data-toggle="modal" data-target="#sequence_example_modal" href="">Example</a>)</span>
+                </h6>
+                <div class="input-group" style="display: inline-block;">
+                    <form action="iRNA5hmC_PS_FASTA" method="POST" enctype="multipart/form-data">
+                        <textarea id="text_box" name="text_box" rows="6" cols="60" class="form-control" placeholder="Please Input Bangla Text"></textarea>
+                        <a id="text_box_format" >The Bangla Text must be in FASTA format.</a><br><br>
+                        <button id="submit_button_fasta" name='submit' type="submit" class="btn btn-primary" 
+                        style="font-family: 'Nanum Gothic', sans-serif; float: left; margin-right:10px;">Submit</button>
+                    </form>
+                    <button id="reset_button" class="btn btn-primary" style="float: left;">Reset</button>
+                </div>
+            </div>
+        </div>
+        <!-- <p>{{ data }}</p>
+        <p>{{ prediction }}</p> -->
+
+    </div>
+    
+    <hr>
+
+    <h6 style="font-weight: bold; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+        References:
+    </h6>
+    <span id="reference_text_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" 
+            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" 
+            style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#4c4a48">
+                <path d="M28.66667,14.33333v143.33333l57.33333,-21.5l57.33333,21.5v-143.33333h-100.33333z"></path>
+            </g></g>
+        </svg>
+    </span> 
+    <div id="reference_text">
+        Shafayat Bin Shabbir Mugdha, Zahid Hossain, Swakkhar Shatabda & Abdollah Dehzangi.  
+        "Accurate prediction of bangla text article categorization by utilizing novel bangla stemmer",
+        (Submitted)
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#reset_button').on('click', function() {     
+                $('#text_box').val('');
+            });
+        });
+    </script>
+
+{% endblock %}
+                

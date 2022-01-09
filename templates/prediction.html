@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+</style>
+
+    <h3 style="font-family: 'Nanum Gothic', sans-serif; color: #0072ff">
+        <span><img id="card_logo" src="static/Text cat.png" alt="iRNA5hmC-PS" ></span></span>
+    </h3>
+    
+    <br>
+    <div class="container">
+        <br>
+        <h5 align="center" style="font-family: 'Roboto', sans-serif; color: #1e9094;">The Prediction for Each Text is Given Below</h5>
+        <br>
+        <div class="container" align="center">
+            
+            <form action="Download" method="POST" enctype="multipart/form-data">
+                <input style="display: none;" type="text" name="prediction" value="{{ prediction }}">
+                <table>
+                    <tr>
+                      <th><center>Data</center></th>
+                      <th>Prediction</th>
+                      
+                    </tr>
+                    <tr>
+                      <td>{{ data }}</td>
+                      <td>{{ prediction }}</td>
+                      
+                    </tr>
+                </table>
+                
+            </form>
+        </div>
+        <br>
+    </div>
+{% endblock %}

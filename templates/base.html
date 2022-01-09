@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bangla Text Categorization</title>
+        <link rel = "icon" href="static/Logo.png">
+        <script src="https://use.fontawesome.com/414c63e910.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-light static-top mb-5 shadow">
+            <div class="container">
+                <a id="brand_name" class="navbar-brand"><img id="logo" style="width: 50%; margin-left: 300px;" src="static/nav.png" alt="iRNA5hmC-PS"></a>
+                <button id="navbar_button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="information_button" class="nav-link" data-toggle="modal" data-target="#information_modal" href="#" style="font-family: 'Nanum Gothic', sans-serif; margin-right: 30px;">Information</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Content -->
+        <div class="container" style="margin-top: -20px;">
+            <div id="card" class="card border my-5">
+                <div class="card-body p-5">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Information Modal -->
+        <div class="modal fade bd-example-modal-lg" id="information_modal" tabindex="-1" role="dialog" aria-labelledby="information_modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" style="font-family: 'Nanum Gothic', sans-serif; color: #0072ff;">Information</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 style="font-weight: bold; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 172 172" 
+                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" 
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" 
+                        font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" 
+                        fill="none"></path><g><path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,
+                            37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,
+                            -83.34609z" fill="#4c4a48"></path><path d="M108.575,123.45703c-0.47031,-0.67187 -1.34375,-0.94062 -2.11641,
+                            -0.57109c-8.26406,3.89688 -17.63672,8.02891 -19.48437,8.39844c-0.03359,-0.03359 -0.13437,-0.10078 -0.20156,
+                            -0.23516c-0.23516,-0.33594 -0.36953,-0.77266 -0.36953,-1.34375c0,-4.66953 3.52734,-18.87969 10.48125,
+                            -42.22734c5.87891,-19.61875 6.55078,-23.68359 6.55078,-25.02734c0,-2.08281 -0.80625,-3.82969 -2.31797,
+                            -5.07266c-1.44453,-1.17578 -3.42656,-1.78047 -5.94609,-1.78047c-4.19922,0 -9.03672,1.57891 -14.81484,
+                            4.87109c-5.61016,3.15781 -11.89219,8.53281 -18.61094,15.95703c-0.5375,0.57109 -0.57109,1.44453 -0.13437,
+                            2.08281c0.43672,0.63828 1.27656,0.87344 2.01563,0.60469c2.35156,-0.97422 14.24375,-5.84531 15.99063,
+                            -6.92031c1.41094,-0.87344 2.65391,-1.34375 3.66172,-1.34375c0.03359,0 0.06719,0 0.10078,0c0,0.06719 
+                            0.03359,0.16797 0.03359,0.30234c0,1.00781 -0.20156,2.25078 -0.63828,3.59453c-10.11172,32.7875 -15.05,52.91016
+                                -15.05,61.47656c0,3.02344 0.83984,5.44219 2.48594,7.22266c1.67969,1.81406 3.96406,2.72109 6.75234,
+                                2.72109c2.98984,0 6.61797,-1.24297 11.11953,-3.82969c4.33359,-2.48594 10.98516,-7.96172 20.29062,
+                                -16.69609c0.57109,-0.60469 0.67188,-1.51172 0.20156,-2.18359zM108.23906,28.42031c-1.64609,-1.67969 
+                                -3.7625,-2.55312 -6.28203,-2.55312c-3.12422,0 -5.87891,1.24297 -8.12969,3.69531c-2.21719,2.41875
+                                -3.32578,5.34141 -3.32578,8.76797c0,2.6875 0.83984,4.93828 2.45234,6.65156c1.64609,1.74688 3.72891,
+                                2.62031 6.21484,2.62031c3.02344,0 5.71094,-1.31016 8.0625,-3.89687c2.31797,-2.55313 3.49375,-5.50938 
+                                3.49375,-8.86875c0,-2.58672 -0.83984,-4.73672 -2.48594,-6.41641z" fill="#ffffff"></path></g></g>
+                        </svg>
+                        Citation
+                    </h5>
+                    <p style="font-family: 'Roboto'; color: #4C4A48;">
+                        "Accurate prediction of bangla text article categorization by utilizing novel bangla stemmer"
+                    </p>
+                    <hr>
+                    <h5 style="font-weight: bold; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" 
+                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" 
+                            style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#4c4a48">
+                                <path d="M28.66667,14.33333v143.33333l57.33333,-21.5l57.33333,21.5v-143.33333h-100.33333z"></path>
+                            </g></g>
+                        </svg>
+                        Publications
+                    </h5>
+                    <p style="font-family: 'Roboto'; color: #4C4A48;">
+                        Shafayat Bin Shabbir Mugdha, Zahid Hossain, Swakkhar Shatabda & Abdollah Dehzangi.  
+                        "Accurate prediction of bangla text article categorization by utilizing novel bangla stemmer",
+                        (Submitted)
+                    </p>
+                    <hr>
+                    <h5 style="font-weight: bold; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" 
+                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" 
+                            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z"
+                            fill="none"></path><g fill="#4c4a48"><path d="M137.6,11.46667h-114.66667v149.06667h114.66667c6.33533,
+                            0 11.46667,-5.13133 11.46667,-11.46667v-126.13333c0,-6.33533 -5.13133,-11.46667 -11.46667,-11.46667zM51.6,
+                            120.4c0,-21.7408 22.93333,-15.52587 25.8,-24.84253v-6.2092c-1.29,-0.69373 -4.97653,-5.4524 -5.3664,
+                            -9.1676c-1.0148,-0.086 -2.60867,-1.09507 -3.0788,-5.07973c-0.25227,-2.13853 0.75107,-3.34253 1.3588,
+                            -3.72093c0,0 -1.5136,-3.45147 -1.5136,-6.87427c0,-10.18813 5.0396,-18.63907 17.2,-18.63907c6.56467,
+                            0 8.6,4.65547 8.6,4.65547c5.8652,0 8.6,6.4328 8.6,13.97787c0,3.76107 -1.5136,6.87427 -1.5136,6.87427c0.60773,
+                            0.3784 1.61107,1.5824 1.3588,3.72093c-0.47013,3.98467 -2.064,4.99373 -3.0788,5.07973c-0.38987,
+                            3.7152 -4.0764,8.47387 -5.3664,9.1676v6.2092c2.86667,9.3224 25.8,3.10747 25.8,24.84827z"></path></g></g>
+                        </svg>
+                        Contact
+                    </h5>
+                    <table id="information_modal_table">
+                        <tr>
+                            <th style="font-weight: lighter; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                                Zahid Hossain
+                            </th>
+                            <td style="color: #0072ff; font-family: 'Roboto', sans-serif;">zahidhossain3742@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th style="font-weight: lighter; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                                Shafayat Bin Shabbir Mugdha
+                            </th>
+                            <td style="color: #0072ff; font-family: 'Roboto', sans-serif;">smugdha161190@bscse.uiu.ac.bd</td>
+                        </tr>
+                        <tr>
+                            <th style="font-weight: lighter; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                                Swakkhar Shatabda
+                            </th>
+                            <td style="color: #0072ff; font-family: 'Roboto', sans-serif;">swakkhar@cse.uiu.ac.bd</td>
+                        </tr>
+                        <tr>
+                            <th style="font-weight: lighter; font-family: 'Roboto', sans-serif; color: #4C4A48;">
+                                Abdollah Dehzangi
+                            </th>
+                            <td style="color: #0072ff; font-family: 'Roboto', sans-serif;">i.dehzangi@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--Sequence Example Modal -->
+        <div class="modal fade bd-example-modal-lg" id="sequence_example_modal" tabindex="-1" role="dialog" aria-labelledby="sequence_example_modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" style="overflow-x: auto;">
+                <div class="modal-header">
+                    <h3 class="modal-title" style="font-family: 'Nanum Gothic', sans-serif; color: #0072ff;">File Content Format</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <table id="sequence_table">
+                                <col width="10">
+                                <col width="100">
+                                    
+                                <thead>
+                                    <tr>
+                                       <th style="font-weight: bold; font-family: 'Roboto', sans-serif; color: #4C4A48;">Bangla Text</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table_row">
+                                    <tr><td>>1</td></tr>
+                                    <tr><td>পাঁচ ম্যাচের ওয়ানডে সিরিজ। দক্ষিণ আফ্রিকার কাছে প্রথম তিনটি ম্যাচ হেরে সিরিজ থেকে ছিটকে গেছে অস্ট্রেলিয়া। বাকি দুটি ম্যাচ তাই নিয়মরক্ষার। তবু ওই দুটি ম্যাচের গুরুত্ব কমছে না অস্ট্রেলিয়ার কাছে। দেশের মাটিতে টেস্ট সিরিজ শুরুর আগে এ দুটি ম্যাচ জিতেই আত্মবিশ্বাসটা চাঙা করতে চায় অস্ট্রেলিয়া।পোর্ট এলিজাবেথে আজ চতুর্থ ওয়ানডেতে মুখোমুখি দুই দল। শেষ ওয়ানডেটা আগামী বুধবার কেপটাউনে। বাকি দুটি ওয়ানডের জন্য খেলোয়াড়দের একটু সতর্ক করলেন অস্ট্রেলিয়ার কোচ ড্যারেন লেম্যান, ‘এই মুহূর্তে আমরা ব্যর্থ। আমাদের আরও ভালো খেলতে হবে। বাকি দুটি ম্যাচে আগের ম্যাচের ভুলগুলো শুধরে নিতে হবে।’ওয়ানডে সিরিজটা হাতছাড়া হওয়ায় লেম্যানের চোখ টেস্ট সিরিজে। টেস্ট দলে অভিজ্ঞ বেশ কয়েকজন যোগ দেবেন। তাই টেস্ট সিরিজে ঘুরে দাঁড়ানোর প্রত্যয় অস্ট্রেলিয়া কোচের কণ্ঠে, ‘ওদের বিপক্ষে কীভাবে খেলতে হয়, তা আমাদের ভালোই জানা আছে। আমরা সবাইকে পেয়ে গেলেই সেটা দেখাতে শুরু করব।’ সিডনি মর্নিং হেরাল্ড।</td></tr>
+                                    <tr><td>>2</td></tr>
+                                    <tr><td>নামে ১ নম্বর ওয়ার্ড হলেও সেবায় সবার থেকে পিছিয়ে। ওয়াসার লাইন নেই। ডাস্টবিন নেই। গ্যাস-সংযোগ নেই বেশির ভাগ এলাকায়। বিদ্যুতেরও একই অবস্থা। সিটি করপোরেশনের অন্তর্ভুক্ত হলেও কিছু রাস্তাঘাট নির্মাণ ছাড়া অন্য সব নাগরিক সুবিধা থেকে বঞ্চিত দক্ষিণ পাহাড়তলীর বাসিন্দারা।স্থানীয় ব্যক্তিদের ক্ষোভ, সিটি করপোরেশন নির্বাচন এলে প্রার্থীরা উন্নয়নের নানা প্রতিশ্রুতি দেন। কিন্তু বাস্তবে তার কোনো প্রতিফলন ঘটে না।২৪ বর্গমাইল আয়তনের এ ওয়ার্ডের দক্ষিণে চট্টগ্রাম সেনানিবাস ও উত্তরে চট্টগ্রাম বিশ্ববিদ্যালয়। পূর্বে অক্সিজেন-হাটহাজারী সড়ক। আর পশ্চিমটা পাহাড়বেষ্টিত। ওয়ার্ডের মোট ভোটার ২৯ হাজার ২৪১ জন।সরেজমিনে ঘুরে ও খোঁজ নিয়ে জানা গেছে, পুরো ওয়ার্ডে একটিও ডাস্টবিন নেই। ওয়াসার লাইন নেই, তাই পানিও নেই। বাসিন্দাদের নলকূপ থেকে পানি সংগ্রহ করতে হয়। কিন্তু সেখানেও সমস্যা। পানির স্তর নিচে নেমে যাওয়ায় নলকূপে পানি কম উঠছে। ফলে অনেককে দূরে গিয়ে খাওয়ার পানি সংগ্রহ করতে হয়।ওয়ার্ডের বড়দিঘীরপাড়, চৌধুরীহাট, সন্দ্বীপ কলোনি, নন্দীরহাট ও ছড়ারকুল এলাকায় পাহাড়ের পাদদেশে প্রায় ৪০ হাজার মানুষের বসবাস। সেখানে আছে প্রায় ১০টি কলোনি। এসব কলোনির বাসিন্দারা নদীভাঙনের শিকার। ’   
+                                    </td></tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+</html>
+
